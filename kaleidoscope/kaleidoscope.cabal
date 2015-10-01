@@ -18,9 +18,14 @@ library
   exposed-modules:     Lexer
                      , Parser
                      , Syntax
+                     , Codegen
+                     , Emit
   build-depends:       base >= 4.7 && < 5
                      , parsec
                      , mtl
+                     , llvm-general-pure
+                     , llvm-general
+                     , containers
   default-language:    Haskell2010
 
 executable kaleidoscope-exe
@@ -32,6 +37,8 @@ executable kaleidoscope-exe
                      , parsec
                      , haskeline
                      , mtl
+                     , llvm-general-pure
+                     , llvm-general
   default-language:    Haskell2010
 
 test-suite kaleidoscope-test

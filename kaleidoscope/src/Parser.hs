@@ -10,14 +10,14 @@ import Lexer
 import Syntax
 
 
-binary s f assoc = Ex.Infix (reservedOp s >> return (BinOp f)) assoc
+binary s assoc = Ex.Infix (reservedOp s >> return (BinaryOp s)) assoc
 
-table = [[binary "*" Times Ex.AssocLeft,
-          binary "/" Devide Ex.AssocLeft,
-          binary "**" Power Ex.AssocLeft,
-          binary "//" Sqrt Ex.AssocLeft]
-        ,[binary "+" Plus Ex.AssocLeft,
-          binary "-" Minus Ex.AssocLeft]]
+table = [[binary "*" Ex.AssocLeft,
+          binary "/" Ex.AssocLeft,
+          binary "**" Ex.AssocLeft,
+          binary "//" Ex.AssocLeft]
+        ,[binary "+" Ex.AssocLeft,
+          binary "-" Ex.AssocLeft]]
 
 int :: Parser Expr
 int = do
@@ -41,7 +41,7 @@ function :: Parser Expr
 function = do
   reserved "def"
   name <- identifier
-  args <- parens $ many variable
+  args <- parens $ many identifier
   body <- expr
   return $ Function name args body
 
@@ -49,7 +49,7 @@ extern :: Parser Expr
 extern = do
   reserved "extern"
   name <- identifier
-  args <- parens $ many variable
+  args <- parens $ many identifier
   return $ Extern name args
 
 call :: Parser Expr
