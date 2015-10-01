@@ -1,0 +1,544 @@
+
+==================== FINAL INTERFACE ====================
+2015-10-01 10:16:51.975349 UTC
+
+interface kalei_0at7tO0Mgz79ZjOo8tyh9Z:Syntax 7102
+  interface hash: e6f7aa3c7852d4228522c030f7de3e47
+  ABI hash: e2039c043e155a3016c39299b003f357
+  export-list hash: 8e64715866b92d3f331db08806489469
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1177ed9910be22cb08b17094c1021b20
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Syntax.Expr{Syntax.BinOp Syntax.Call Syntax.Extern Syntax.Float Syntax.Function Syntax.Var}
+  Syntax.Name
+  Syntax.Op{Syntax.Devide Syntax.Minus Syntax.Plus Syntax.Power Syntax.Sqrt Syntax.Times}
+module dependencies:
+package dependencies: base-4.8.1.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Monoid
+                         base-4.8.1.0:Data.Type.Equality base-4.8.1.0:GHC.Generics
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:GHC.Show b8c65ca3124f92a166c9f05120382442
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+c0049c1cb05c55a188671624a0622bd6
+  $fEqExpr :: GHC.Classes.Eq Syntax.Expr
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Syntax.Expr Syntax.$fEqExpr_$c== Syntax.$fEqExpr_$c/= -}
+c0049c1cb05c55a188671624a0622bd6
+  $fEqExpr_$c/= :: Syntax.Expr -> Syntax.Expr -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Syntax.Expr b :: Syntax.Expr ->
+                 case Syntax.$fEqExpr_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fEqExpr_$c== :: Syntax.Expr -> Syntax.Expr -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fEqOp :: GHC.Classes.Eq Syntax.Op
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Syntax.Op Syntax.$fEqOp_$c== Syntax.$fEqOp_$c/= -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fEqOp_$c/= :: Syntax.Op -> Syntax.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a :: Syntax.Op b :: Syntax.Op ->
+                 case a of wild {
+                   Syntax.Plus
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Syntax.Plus -> GHC.Types.False }
+                   Syntax.Minus
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Syntax.Minus -> GHC.Types.False }
+                   Syntax.Power
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Syntax.Power -> GHC.Types.False }
+                   Syntax.Sqrt
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Syntax.Sqrt -> GHC.Types.False }
+                   Syntax.Times
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Syntax.Times -> GHC.Types.False }
+                   Syntax.Devide
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Syntax.Devide -> GHC.Types.False } }) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fEqOp_$c== :: Syntax.Op -> Syntax.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ ds :: Syntax.Op ds1 :: Syntax.Op ->
+                 case ds of wild {
+                   Syntax.Plus
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Syntax.Plus -> GHC.Types.True }
+                   Syntax.Minus
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Syntax.Minus -> GHC.Types.True }
+                   Syntax.Power
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Syntax.Power -> GHC.Types.True }
+                   Syntax.Sqrt
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Syntax.Sqrt -> GHC.Types.True }
+                   Syntax.Times
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Syntax.Times -> GHC.Types.True }
+                   Syntax.Devide
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Syntax.Devide -> GHC.Types.True } }) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fOrdExpr :: GHC.Classes.Ord Syntax.Expr
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Syntax.Expr
+                  Syntax.$fEqExpr
+                  Syntax.$fOrdExpr_$ccompare
+                  Syntax.$fOrdExpr_$c<
+                  Syntax.$fOrdExpr_$c<=
+                  Syntax.$fOrdExpr_$c>
+                  Syntax.$fOrdExpr_$c>=
+                  Syntax.$fOrdExpr_$cmax
+                  Syntax.$fOrdExpr_$cmin -}
+c0049c1cb05c55a188671624a0622bd6
+  $fOrdExpr_$c< :: Syntax.Expr -> Syntax.Expr -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: Syntax.Expr y :: Syntax.Expr ->
+                 case Syntax.$fOrdExpr_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True }) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fOrdExpr_$c<= :: Syntax.Expr -> Syntax.Expr -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: Syntax.Expr y :: Syntax.Expr ->
+                 case Syntax.$fOrdExpr_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False }) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fOrdExpr_$c> :: Syntax.Expr -> Syntax.Expr -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: Syntax.Expr y :: Syntax.Expr ->
+                 case Syntax.$fOrdExpr_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True }) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fOrdExpr_$c>= :: Syntax.Expr -> Syntax.Expr -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: Syntax.Expr y :: Syntax.Expr ->
+                 case Syntax.$fOrdExpr_$ccompare x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False }) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fOrdExpr_$ccompare ::
+    Syntax.Expr -> Syntax.Expr -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U> -}
+c0049c1cb05c55a188671624a0622bd6
+  $fOrdExpr_$cmax :: Syntax.Expr -> Syntax.Expr -> Syntax.Expr
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: Syntax.Expr y :: Syntax.Expr ->
+                 case Syntax.$fOrdExpr_$ccompare x y of wild {
+                   DEFAULT -> y GHC.Types.GT -> x }) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fOrdExpr_$cmin :: Syntax.Expr -> Syntax.Expr -> Syntax.Expr
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: Syntax.Expr y :: Syntax.Expr ->
+                 case Syntax.$fOrdExpr_$ccompare x y of wild {
+                   DEFAULT -> x GHC.Types.GT -> y }) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fOrdOp :: GHC.Classes.Ord Syntax.Op
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Syntax.Op
+                  Syntax.$fEqOp
+                  Syntax.$fOrdOp_$ccompare
+                  Syntax.$fOrdOp_$c<
+                  Syntax.$fOrdOp_$c<=
+                  Syntax.$fOrdOp_$c>
+                  Syntax.$fOrdOp_$c>=
+                  Syntax.$fOrdOp_$cmax
+                  Syntax.$fOrdOp_$cmin -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fOrdOp_$c< :: Syntax.Op -> Syntax.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a :: Syntax.Op b :: Syntax.Op ->
+                 case a of wild {
+                   Syntax.Plus
+                   -> case b of wild1 {
+                        Syntax.Plus -> GHC.Types.False
+                        Syntax.Minus -> GHC.Types.True
+                        Syntax.Power -> GHC.Types.True
+                        Syntax.Sqrt -> GHC.Types.True
+                        Syntax.Times -> GHC.Types.True
+                        Syntax.Devide -> GHC.Types.True }
+                   Syntax.Minus
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Syntax.Power -> GHC.Types.True
+                        Syntax.Sqrt -> GHC.Types.True
+                        Syntax.Times -> GHC.Types.True
+                        Syntax.Devide -> GHC.Types.True }
+                   Syntax.Power
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Syntax.Sqrt -> GHC.Types.True
+                        Syntax.Times -> GHC.Types.True
+                        Syntax.Devide -> GHC.Types.True }
+                   Syntax.Sqrt
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Syntax.Times -> GHC.Types.True
+                        Syntax.Devide -> GHC.Types.True }
+                   Syntax.Times
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False Syntax.Devide -> GHC.Types.True }
+                   Syntax.Devide
+                   -> case b of wild1 { DEFAULT -> GHC.Types.False } }) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fOrdOp_$c<= :: Syntax.Op -> Syntax.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a :: Syntax.Op b :: Syntax.Op ->
+                 case a of wild {
+                   Syntax.Plus -> case b of wild1 { DEFAULT -> GHC.Types.True }
+                   Syntax.Minus
+                   -> case b of wild1 {
+                        Syntax.Plus -> GHC.Types.False
+                        Syntax.Minus -> GHC.Types.True
+                        Syntax.Power -> GHC.Types.True
+                        Syntax.Sqrt -> GHC.Types.True
+                        Syntax.Times -> GHC.Types.True
+                        Syntax.Devide -> GHC.Types.True }
+                   Syntax.Power
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Syntax.Power -> GHC.Types.True
+                        Syntax.Sqrt -> GHC.Types.True
+                        Syntax.Times -> GHC.Types.True
+                        Syntax.Devide -> GHC.Types.True }
+                   Syntax.Sqrt
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Syntax.Sqrt -> GHC.Types.True
+                        Syntax.Times -> GHC.Types.True
+                        Syntax.Devide -> GHC.Types.True }
+                   Syntax.Times
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Syntax.Times -> GHC.Types.True
+                        Syntax.Devide -> GHC.Types.True }
+                   Syntax.Devide
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False Syntax.Devide -> GHC.Types.True } }) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fOrdOp_$c> :: Syntax.Op -> Syntax.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a :: Syntax.Op b :: Syntax.Op ->
+                 case a of wild {
+                   Syntax.Plus -> case b of wild1 { DEFAULT -> GHC.Types.False }
+                   Syntax.Minus
+                   -> case b of wild1 {
+                        Syntax.Plus -> GHC.Types.True
+                        Syntax.Minus -> GHC.Types.False
+                        Syntax.Power -> GHC.Types.False
+                        Syntax.Sqrt -> GHC.Types.False
+                        Syntax.Times -> GHC.Types.False
+                        Syntax.Devide -> GHC.Types.False }
+                   Syntax.Power
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Syntax.Power -> GHC.Types.False
+                        Syntax.Sqrt -> GHC.Types.False
+                        Syntax.Times -> GHC.Types.False
+                        Syntax.Devide -> GHC.Types.False }
+                   Syntax.Sqrt
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Syntax.Sqrt -> GHC.Types.False
+                        Syntax.Times -> GHC.Types.False
+                        Syntax.Devide -> GHC.Types.False }
+                   Syntax.Times
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Syntax.Times -> GHC.Types.False
+                        Syntax.Devide -> GHC.Types.False }
+                   Syntax.Devide
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Syntax.Devide -> GHC.Types.False } }) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fOrdOp_$c>= :: Syntax.Op -> Syntax.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a :: Syntax.Op b :: Syntax.Op ->
+                 case a of wild {
+                   Syntax.Plus
+                   -> case b of wild1 {
+                        Syntax.Plus -> GHC.Types.True
+                        Syntax.Minus -> GHC.Types.False
+                        Syntax.Power -> GHC.Types.False
+                        Syntax.Sqrt -> GHC.Types.False
+                        Syntax.Times -> GHC.Types.False
+                        Syntax.Devide -> GHC.Types.False }
+                   Syntax.Minus
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Syntax.Power -> GHC.Types.False
+                        Syntax.Sqrt -> GHC.Types.False
+                        Syntax.Times -> GHC.Types.False
+                        Syntax.Devide -> GHC.Types.False }
+                   Syntax.Power
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Syntax.Sqrt -> GHC.Types.False
+                        Syntax.Times -> GHC.Types.False
+                        Syntax.Devide -> GHC.Types.False }
+                   Syntax.Sqrt
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Syntax.Times -> GHC.Types.False
+                        Syntax.Devide -> GHC.Types.False }
+                   Syntax.Times
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Syntax.Devide -> GHC.Types.False }
+                   Syntax.Devide
+                   -> case b of wild1 { DEFAULT -> GHC.Types.True } }) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fOrdOp_$ccompare :: Syntax.Op -> Syntax.Op -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a :: Syntax.Op b :: Syntax.Op ->
+                 case a of wild {
+                   Syntax.Plus
+                   -> case b of wild1 {
+                        Syntax.Plus -> GHC.Types.EQ
+                        Syntax.Minus -> GHC.Types.LT
+                        Syntax.Power -> GHC.Types.LT
+                        Syntax.Sqrt -> GHC.Types.LT
+                        Syntax.Times -> GHC.Types.LT
+                        Syntax.Devide -> GHC.Types.LT }
+                   Syntax.Minus
+                   -> case b of wild1 {
+                        Syntax.Plus -> GHC.Types.GT
+                        Syntax.Minus -> GHC.Types.EQ
+                        Syntax.Power -> GHC.Types.LT
+                        Syntax.Sqrt -> GHC.Types.LT
+                        Syntax.Times -> GHC.Types.LT
+                        Syntax.Devide -> GHC.Types.LT }
+                   Syntax.Power
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Syntax.Power -> GHC.Types.EQ
+                        Syntax.Sqrt -> GHC.Types.LT
+                        Syntax.Times -> GHC.Types.LT
+                        Syntax.Devide -> GHC.Types.LT }
+                   Syntax.Sqrt
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Syntax.Sqrt -> GHC.Types.EQ
+                        Syntax.Times -> GHC.Types.LT
+                        Syntax.Devide -> GHC.Types.LT }
+                   Syntax.Times
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Syntax.Times -> GHC.Types.EQ
+                        Syntax.Devide -> GHC.Types.LT }
+                   Syntax.Devide
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT Syntax.Devide -> GHC.Types.EQ } }) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fOrdOp_$cmax :: Syntax.Op -> Syntax.Op -> Syntax.Op
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ x :: Syntax.Op y :: Syntax.Op ->
+                 case x of wild {
+                   Syntax.Plus -> y
+                   Syntax.Minus
+                   -> case y of wild1 {
+                        DEFAULT -> Syntax.Minus
+                        Syntax.Power -> Syntax.Power
+                        Syntax.Sqrt -> Syntax.Sqrt
+                        Syntax.Times -> Syntax.Times
+                        Syntax.Devide -> Syntax.Devide }
+                   Syntax.Power
+                   -> case y of wild1 {
+                        DEFAULT -> Syntax.Power
+                        Syntax.Sqrt -> Syntax.Sqrt
+                        Syntax.Times -> Syntax.Times
+                        Syntax.Devide -> Syntax.Devide }
+                   Syntax.Sqrt
+                   -> case y of wild1 {
+                        DEFAULT -> Syntax.Sqrt
+                        Syntax.Times -> Syntax.Times
+                        Syntax.Devide -> Syntax.Devide }
+                   Syntax.Times
+                   -> case y of wild1 {
+                        DEFAULT -> Syntax.Times Syntax.Devide -> Syntax.Devide }
+                   Syntax.Devide -> case y of wild1 { DEFAULT -> Syntax.Devide } }) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fOrdOp_$cmin :: Syntax.Op -> Syntax.Op -> Syntax.Op
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ x :: Syntax.Op y :: Syntax.Op ->
+                 case x of wild {
+                   Syntax.Plus -> case y of wild1 { DEFAULT -> Syntax.Plus }
+                   Syntax.Minus
+                   -> case y of wild1 {
+                        Syntax.Plus -> Syntax.Plus
+                        Syntax.Minus -> Syntax.Minus
+                        Syntax.Power -> Syntax.Minus
+                        Syntax.Sqrt -> Syntax.Minus
+                        Syntax.Times -> Syntax.Minus
+                        Syntax.Devide -> Syntax.Minus }
+                   Syntax.Power
+                   -> case y of wild1 {
+                        DEFAULT -> wild1
+                        Syntax.Power -> Syntax.Power
+                        Syntax.Sqrt -> Syntax.Power
+                        Syntax.Times -> Syntax.Power
+                        Syntax.Devide -> Syntax.Power }
+                   Syntax.Sqrt
+                   -> case y of wild1 {
+                        DEFAULT -> wild1
+                        Syntax.Sqrt -> Syntax.Sqrt
+                        Syntax.Times -> Syntax.Sqrt
+                        Syntax.Devide -> Syntax.Sqrt }
+                   Syntax.Times
+                   -> case y of wild1 {
+                        DEFAULT -> wild1
+                        Syntax.Times -> Syntax.Times
+                        Syntax.Devide -> Syntax.Times }
+                   Syntax.Devide -> y }) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fShowExpr :: GHC.Show.Show Syntax.Expr
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Syntax.Expr
+                  Syntax.$fShowExpr_$cshowsPrec
+                  Syntax.$fShowExpr_$cshow
+                  Syntax.$fShowExpr_$cshowList -}
+c0049c1cb05c55a188671624a0622bd6
+  $fShowExpr1 :: Syntax.Expr -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ w :: Syntax.Expr -> Syntax.$w$cshowsPrec 0 w) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fShowExpr_$cshow :: Syntax.Expr -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Syntax.Expr ->
+                 Syntax.$fShowExpr_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fShowExpr_$cshowList :: [Syntax.Expr] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Syntax.Expr
+                   Syntax.$fShowExpr1) -}
+c0049c1cb05c55a188671624a0622bd6
+  $fShowExpr_$cshowsPrec ::
+    GHC.Types.Int -> Syntax.Expr -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(U)><S,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: Syntax.Expr ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Syntax.$w$cshowsPrec ww1 w1 }) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fShowOp :: GHC.Show.Show Syntax.Op
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Syntax.Op
+                  Syntax.$fShowOp_$cshowsPrec
+                  Syntax.$fShowOp_$cshow
+                  Syntax.$fShowOp_$cshowList -}
+d5242eb6a9ddd4c499b9b563981f6f0d
+  $fShowOp1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Devide"#) -}
+aa93e79ca77215fb2f68a06a7e5977f4
+  $fShowOp2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Times"#) -}
+77978a4ee9e00b90681da67d695c166d
+  $fShowOp3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Sqrt"#) -}
+899c21de79304d7ed9c5ff3f2f9f8f94
+  $fShowOp4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Power"#) -}
+68917497c3ad53253903a4f196d00bf0
+  $fShowOp5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Minus"#) -}
+fa91237c6fdfeee65dee171b7ff4f953
+  $fShowOp6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Plus"#) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fShowOp_$cshow :: Syntax.Op -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Syntax.Op ->
+                 Syntax.$fShowOp_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fShowOp_$cshowList :: [Syntax.Op] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Syntax.Op
+                   Syntax.$w$cshowsPrec1) -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $fShowOp_$cshowsPrec ::
+    GHC.Types.Int -> Syntax.Op -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ w :: GHC.Types.Int w1 :: Syntax.Op w2 :: GHC.Base.String ->
+                 Syntax.$w$cshowsPrec1 w1 w2) -}
+c0049c1cb05c55a188671624a0622bd6
+  $w$cshowsPrec :: GHC.Prim.Int# -> Syntax.Expr -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,U><S,1*U>, Inline: [0] -}
+d869d7e852c4cb775a8ed7ef66385b7f
+  $w$cshowsPrec1 :: Syntax.Op -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ w :: Syntax.Op w1 :: GHC.Base.String ->
+                 case w of wild {
+                   Syntax.Plus -> GHC.Base.++ @ GHC.Types.Char Syntax.$fShowOp6 w1
+                   Syntax.Minus -> GHC.Base.++ @ GHC.Types.Char Syntax.$fShowOp5 w1
+                   Syntax.Power -> GHC.Base.++ @ GHC.Types.Char Syntax.$fShowOp4 w1
+                   Syntax.Sqrt -> GHC.Base.++ @ GHC.Types.Char Syntax.$fShowOp3 w1
+                   Syntax.Times -> GHC.Base.++ @ GHC.Types.Char Syntax.$fShowOp2 w1
+                   Syntax.Devide
+                   -> GHC.Base.++ @ GHC.Types.Char Syntax.$fShowOp1 w1 }) -}
+c0049c1cb05c55a188671624a0622bd6
+  data Expr
+    = Float GHC.Types.Double
+    | BinOp Syntax.Op Syntax.Expr Syntax.Expr
+    | Var GHC.Base.String
+    | Call Syntax.Name [Syntax.Expr]
+    | Function Syntax.Name [Syntax.Expr] Syntax.Expr
+    | Extern Syntax.Name [Syntax.Expr]
+69d44ce6a2c7091945fb79be2483328a
+  type Name = GHC.Base.String
+d869d7e852c4cb775a8ed7ef66385b7f
+  data Op = Plus | Minus | Power | Sqrt | Times | Devide
+    Promotable
+instance GHC.Classes.Eq [Syntax.Expr] = Syntax.$fEqExpr
+instance GHC.Classes.Eq [Syntax.Op] = Syntax.$fEqOp
+instance GHC.Classes.Ord [Syntax.Expr] = Syntax.$fOrdExpr
+instance GHC.Classes.Ord [Syntax.Op] = Syntax.$fOrdOp
+instance GHC.Show.Show [Syntax.Expr] = Syntax.$fShowExpr
+instance GHC.Show.Show [Syntax.Op] = Syntax.$fShowOp
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
